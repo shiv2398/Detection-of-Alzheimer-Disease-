@@ -1,0 +1,32 @@
+data:
+  data_dir: /path/to/data/dir
+  train_path: /path/to/train/data
+  augmented_data_path: /path/to/augmented/data
+  test_data:
+    create: true
+    test_data_path: /path
+  val_path: /path/
+  batch_size: 32
+  train_size: 0.8
+  val_size: 0.2
+  num_workers: 2
+  shuffle: true
+  train_transforms:
+    - Resize:
+        size: [256, 256]
+    - ToTensor:
+    - Normalize:
+        mean: [0.5, 0.5, 0.5]
+        std: [0.5, 0.5, 0.5]
+      
+
+train_val:
+  train_with_val: true
+data_ratio:
+  unbalanced: false
+
+
+
+
+
+
