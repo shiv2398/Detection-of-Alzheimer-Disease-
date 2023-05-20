@@ -1,0 +1,21 @@
+resnet:
+  num_classes: 4
+  resnet18:
+    pretrained: true
+    depth: 18
+
+  resnet34:
+    depth: 34
+
+  resnet52:
+    depth: 52
+    
+  resnet101:
+    depth: 101
+    
+  resnet152:
+    depth: 152
+    
+vgg:
+  num_classes: 4
+  pretrained: true
