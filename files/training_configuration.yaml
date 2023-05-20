@@ -1,0 +1,73 @@
+training:
+  inference : false
+  loss: true
+  learning_rate: 0.001
+  num_epochs: 100
+
+  optimizer1:
+    name: RMSProp
+    lr: 0.001
+
+  optimizer2:
+    name: Adam
+    lr: 0.001
+
+  loss1: CrossEntropyLoss
+  
+
+  scheduler: RLR
+  factor: 0.1
+
+  early_stopping:
+    use: true
+    save_checkpoint: true
+    patience: 3
+    verbose: true
+    model_s_path: /path/to/save/model
+
+  metrics:
+    loss: true
+    accuracy: true
+    f1_score: true
+    precision: true
+    recall: true
+    sensitivity: true
+    prevalence: true
+    npv: true
+    lr_plus: true
+    lr_minus: true
+    save: true
+    save_path: /path/to/save/metrics
+
+validation:
+  inference: true
+  metrics:
+    loss: true
+    accuracy: true
+    f1_score: true
+    precision: true
+    recall: true
+    sensitivity: true
+    prevalence: true
+    npv: true
+    lr_plus: true
+    lr_minus: true
+    save: true
+    save_path: /path/to/save/validation/metrics
+
+Testing:
+  test: true
+  inference: true
+  model_path: /path
+  metrics:
+    accuracy: true
+    f1_score: true
+    precision: true
+    recall: true
+    sensitivity: true
+    prevalence: true
+    npv: true
+    lr_plus: true
+    lr_minus: true
+    save: true
+    save_path: /path/to/save/validation/metrics
