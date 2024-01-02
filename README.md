@@ -25,7 +25,7 @@ This project focuses on Alzheimer detection using deep learning techniques. The 
 
 ### Command <a name="train-command"></a>
 ```bash
-python script_name.py train --train_data_path <train_data_path> --Epochs <num_epochs> --model <model_name> --test_data_path <test_data_path> [--val_exp] [--val_data_path <val_data_path>] [--biased]
+python main.py train --train_data_path <train_data_path> --Epochs <num_epochs> --model <model_name> --test_data_path <test_data_path> [--val_exp] [--val_data_path <val_data_path>] [--biased]
 ```
 
 ### Arguments <a name="train-arguments"></a>
@@ -46,14 +46,14 @@ python script_name.py train --train_data_path <train_data_path> --Epochs <num_ep
 
 ### Example <a name="train-example"></a>
 ```bash
-python script_name.py train --train_data_path data/train_data --Epochs 50 --model CNN_model --test_data_path data/test_data --val_exp --val_data_path data/val_data --biased
+python main.py train --train_data_path data/train_data --Epochs 50 --model CNN_model --test_data_path data/test_data --val_exp --val_data_path data/val_data --biased
 ```
 
 ## Test the Model <a name="test-the-model"></a>
 
 ### Command <a name="test-command"></a>
 ```bash
-python script_name.py test --model <model_name> --test_data_path <test_data_path> --model_path <model_path>
+python main.py test --model <model_name> --test_data_path <test_data_path> --model_path <model_path>
 ```
 
 ### Arguments <a name="test-arguments"></a>
@@ -63,14 +63,14 @@ python script_name.py test --model <model_name> --test_data_path <test_data_path
 
 ### Example <a name="test-example"></a>
 ```bash
-python script_name.py test --model CNN_model --test_data_path data/test_data --model_path saved_models/CNN_model_epoch_50.h5
+python main.py test --model CNN_model --test_data_path data/test_data --model_path saved_models/CNN_model_epoch_50.h5
 ```
 
 ## Model Testing <a name="model-testing"></a>
 
 ### Command <a name="model-testing-command"></a>
 ```bash
-python script_name.py model_testing --model <model_name> --test_data_path <test_data_path> --model_path <model_path>
+python main.py model_testing --model <model_name> --test_data_path <test_data_path> --model_path <model_path>
 ```
 
 ### Arguments <a name="model-testing-arguments"></a>
@@ -80,5 +80,5 @@ python script_name.py model_testing --model <model_name> --test_data_path <test_
 
 ### Example <a name="model-testing-example"></a>
 ```bash
-python script_name.py model_testing --model CNN_model --test_data_path data/test_data --model_path saved_models/CNN_model_epoch_50.h5
+python main.py model_testing --model CNN_model --test_data_path data/test_data --model_path saved_models/CNN_model_epoch_50.h5
 ```
